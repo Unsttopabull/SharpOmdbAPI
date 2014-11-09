@@ -51,7 +51,7 @@ namespace Frost.SharpOmdbAPI.Models {
         /// <summary>The Metascore.com score on an integer scale from 0 to 100.</summary>
         public string Metascore { get; set; }
 
-        /// <summary>The Metascore.com score on an integer scale from 0 to 100.</summary>
+        /// <summary>The IMDB score on an decimal scale from 0.0 to 10.0.</summary>
         [JsonProperty("imdbRating")]
         public string ImdbRating { get; set; }
 
@@ -59,14 +59,14 @@ namespace Frost.SharpOmdbAPI.Models {
         [JsonProperty("imdbVotes")]
         public string ImdbVotes { get; set; }
 
-        /// <summary>The IMDB indentification in the format of tt1234567.</summary>
+        /// <summary>The IMDB movie id in the format of tt1234567.</summary>
         [JsonProperty("imdbID")]
         public string ImdbId { get; set; }
 
         /// <summary>The type of the title (movie/episode/featurette/etc.).</summary>
         public string Type { get; set; }
 
-        /// <summary>The RottenTomatoes TomatoMeter rating on the integer scale of 0 to 100.</summary>
+        /// <summary>The RottenTomatoes TomatoMeter rating (ratio of "fresh" reviews in total number of reviews) on the integer scale of 0 to 100.</summary>
         [JsonProperty("tomatoMeter")]
         public string TomatoMeter { get; set; }
 
@@ -74,19 +74,19 @@ namespace Frost.SharpOmdbAPI.Models {
         [JsonProperty("tomatoImage")]
         public string TomatoImage { get; set; }
 
-        /// <summary>The RottenTomatoes rating on the decimal scale of 0 to 10.0.</summary>
+        /// <summary>The RottenTomatoes average critics rating on the decimal scale of 0 to 10.0.</summary>
         [JsonProperty("tomatoRating")]
         public string TomatoRating { get; set; }
 
-        /// <summary>The RottenTomatoes reviews score.</summary>
+        /// <summary>The RottenTomatoes total number of approved critics reviews.</summary>
         [JsonProperty("tomatoReviews")]
         public string TomatoReviews { get; set; }
 
-        /// <summary>The RottenTomatoes fresh/rotten line value part (min 0 max 100).</summary>
+        /// <summary>The RottenTomatoes number of "fresh" critics reviews (review score 60/100 or higher).</summary>
         [JsonProperty("tomatoFresh")]
         public string TomatoFresh { get; set; }
 
-        /// <summary>The RottenTomatoes fresh/rotten line value part (min 0 max 100).</summary>
+        /// <summary>The RottenTomatoes number of "rotten" critics reviews (review score 59/100 or lower).</summary>
         [JsonProperty("tomatoRotten")]
         public string TomatoRotten { get; set; }
 
@@ -94,7 +94,7 @@ namespace Frost.SharpOmdbAPI.Models {
         [JsonProperty("tomatoConsensus")]
         public string TomatoConsensus { get; set; }
 
-        /// <summary>The RottenTomatoes user rating on the integer scale from 0 to 100.</summary>
+        /// <summary>The RottenTomatoes user rating on the integer scale from 0 to 100 (percentage of users who rated this movie 3.5/5 or higher).</summary>
         [JsonProperty("tomatoUserMeter")]
         public string TomatoUserMeter { get; set; }
 
